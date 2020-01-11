@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Field from '../../components/Field'
+
 import './styles.scss'
 
-export default () => <h1>Login</h1>
+export default () => <Field />
