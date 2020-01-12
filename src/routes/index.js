@@ -4,8 +4,8 @@ import { BrowserRouter, Switch } from 'react-router-dom'
 import PublicRoute from './PublicRoute' 
 import PrivateRoute from './PrivateRoute'
 
-import Home from '../pages/Home'
-import Login from '../pages/Login'
+import Home from '../pages/Home.js'
+import Login from '../pages/Login.js'
 
 export default () => 
   <BrowserRouter>
