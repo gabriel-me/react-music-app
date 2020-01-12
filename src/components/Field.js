@@ -6,11 +6,12 @@ const Field = styled.input`
   border: 1px solid #E6E6E6;
   border-radius: 3px;
   outline: none;
+  width: ${({ width }) => `${width}%`};
 
   &:hover,
   &:focus {
-    border-color: #01E385;
-    box-shadow: 0 0 .01px 1px #01E385;
+    border-color: #0080FF;
+    box-shadow: 0 0 .01px 1px #0080FF;
   }
 `
 

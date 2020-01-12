@@ -2,31 +2,31 @@ import styled from 'styled-components'
 
 const getSize = size => {
   if (size === 'sm') 
-    return 'padding: .4rem .6rem;'
+    return '.4rem .6rem'
 
   if (size === 'lg') 
-    return 'padding: 1rem 1.2rem;'
+    return '.8rem 1rem'
   
   if (size === 'bg') 
-    return 'padding: 1.2rem 1.4rem;'
+    return '1rem 1.2rem'
     
-  return 'padding: .8rem 1rem;'
+  return '.6rem .8rem'
 }
 
-const getStyle = type => {
+const getType = type => {
   if (type === 'primary') 
-    return `background-color: #1B90FD;`
+    return '#1B90FD'
   
   if (type === 'warning') 
-    return `background-color: #DFF201;`
+    return '#DFF201'
 
   if (type === 'success') 
-    return `background-color: #23D856;`
+    return '#23D856'
   
   if (type === 'danger') 
-    return `background-color: #E90300;`
+    return '#E90300'
   
-  return `background-color: #01E385;`
+  return '#0080FF'
 }
 
 const Button = styled.button`
@@ -39,9 +39,10 @@ const Button = styled.button`
   cursor: pointer;
   outline: none; 
   z-index: 1;
-  ${({ size }) => getSize(size)}
-  ${({ type }) => getStyle(type)}
-
+  width: ${({ width }) => `${width}%` || 'auto'};
+  padding: ${({ size }) => getSize(size)};
+  background-color: ${({ type }) => getType(type)};
+  
   &:before {
     content: '';
     position: absolute;
