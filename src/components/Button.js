@@ -31,6 +31,7 @@ const getType = type => {
 
 const Button = styled.button`
   position: relative;
+  margin: .5rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -39,7 +40,7 @@ const Button = styled.button`
   cursor: pointer;
   outline: none; 
   z-index: 1;
-  width: ${({ width }) => `${width}%` || 'auto'};
+  width: ${({ width }) => `calc(${width}% - 1rem)` || 'auto'};
   padding: ${({ size }) => getSize(size)};
   background-color: ${({ type }) => getType(type)};
   

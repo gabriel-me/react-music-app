@@ -11,11 +11,13 @@ const FieldContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: ${({ width }) => `${width}%`};
+  margin: .5rem;
 
   label {
     font-size: .7rem;
     font-weight: bold;
     text-transform: uppercase;
+    margin-bottom: .25rem;
   }
 
   input {
